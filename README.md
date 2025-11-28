@@ -90,7 +90,8 @@ Adaptive MPC
        # type: l1
    ``` 
 
-Constant external forces can be applied in `local_planner.yaml`:
+External forces
+- Constant forces can be applied in `local_planner.yaml`:
    ```
    experiment_params:
        add_force: false

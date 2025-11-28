@@ -4,6 +4,9 @@
 
 This repo contains the simulaton code with Gazebo associated to our paper [Adaptive Legged Locomotion via Online Learning for Model Predictive Control](https://arxiv.org/abs/2510.15626) (accepted to IEEE Robotics and Automation Letters). The algorithm is built upon our previous paper [Simultaneous System Identification and Model Predictive Control with No Dynamic Regret](https://arxiv.org/abs/2407.04143). In the paper, we propose the algorithm SSI-MPC for adaptive legged locomotion, with simultaneous model learning of unknown dyanmics/disturbance in a self-supervised manner using only the data collected on-the-go (i.e., without offline training), and model predictive control. 
 
+![image](https://github.com/UM-iRaL/Adaptive-Legged-Locomotion/tree/main/doc/front.png)
+
+
 ### License
 
 The source code is released under a [MIT License](LICENSE).

@@ -1,0 +1,52 @@
+local_planner:
+  update_rate: 200 # Hz
+  timestep: 0.03 # s
+  horizon_length: 20 # timesteps
+  desired_height: 0.3 # m
+  toe_radius: 0.02 # m
+  cmd_vel_filter_const: 0.10
+  cmd_vel_x: 0.5 # only use for rough terrain experiment
+  cmd_vel_scale: 1.0
+  last_cmd_vel_msg_time_max: 2.0
+  stand_vel_threshold: 0.1
+  stand_cmd_vel_threshold: 0.1
+  stand_pos_error_threshold: 0.05
+
+local_footstep_planner:
+  grf_weight: 0.5
+  period: 0.54 # s
+  ground_clearance: 0.07
+  standing_error_threshold: 0.03 # m
+  foothold_obj_threshold: 0.6 # Note: For now must match /grid_map_filters/traversability_mask_lower_threshold/lower_threshold
+  obj_fun_layer: traversability
+  duty_cycles: [0.5, 0.5, 0.5, 0.5]
+  phase_offsets: [0.0, 0.5, 0.5, 0.0]
+
+control_type: # nominal, rf, l1
+  type: nominal
+  # type: rf
+  # type: l1
+  record_data: false
+
+rf_params:
+  rf_size_target_mask: 6
+  rf_size_input_mask: 15
+  rf_n_rf: 50
+  rf_kernel_type: 0
+  rf_kernel_std: 0.01
+  rf_lr_trans: 0.003
+  rf_lr_att: 0.003
+
+l1_params:
+  l1_size_target_mask: 6
+  As_v: -5
+  As_w: -10
+  w_f: 0.5   # 1.0 # 2.0
+  w_m1: 0.5  # 1.0 # 2.0 
+  w_m2: 1.0  # 2.0 # 5.0
+
+experiment_params:
+  add_force: false
+  fx: 0.0  # kg
+  fy: 0.0  # kg
+  fz: 0.0  # kg
